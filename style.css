@@ -1,7 +1,7 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-    /* outline-style: dashed; */
+     outline-style: dashed; 
     scroll-behavior: smooth;
 }
 html {    
@@ -60,10 +60,17 @@ html {
     position: relative;
     /* padding: 0em 5.7em; */
     width: calc(100% + 3.125em) !important;
-    font-size: 1.05em !important;
+    font-size: 1.2em !important;
 
 }
 
+.take{
+    display: flex;
+    min-height: 100% !important;
+    margin: 0;
+    flex: 1;
+    line-height: 2;
+}
 .language{
     position: relative !important;
 }
@@ -206,8 +213,16 @@ h1,h2,h3{
     white-space: nowrap;
     font-size: 1rem;
     width: 100% !important;
+  
+
 }
 
+
+
+
+.endcardjs{
+    height: 100%;
+}
 .listofas > h2{
     font-size: 2.5rem;
     font-weight: 900;
@@ -280,10 +295,13 @@ h1,h2,h3{
 .pycard > .endcard{
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: end;
 }
+
+
 .rightside > .card{
     width: 30em;
+    max-width: 100%;
     background-color: #E7E9EB;
     border: 0.02em;
     border-radius: 0.2em;
@@ -295,8 +313,6 @@ h1,h2,h3{
   
 
 }
-
-
 .pythonwrapcode{
     height: 100%;
     text-align: start !important;
@@ -309,7 +325,9 @@ h1,h2,h3{
     font-size: 1.4rem !important;
 }
 
-
+#removemargin{
+    margin-top: 0.85em;
+}
 .wrapcode{
     width: 100%;
     display: flex;
@@ -322,6 +340,7 @@ h1,h2,h3{
     /*color: red;*/
     border-left: 0.19em solid #029962;
     /* white-space: wrap; */
+    height: 70%;
 
 }
 
@@ -766,6 +785,7 @@ footer{
         position: relative;
         /* padding: 0em 7.7em !important; */
         width: calc(min(100%, 80vw) + 1.25em) !important;
+
     }
     
 
@@ -773,7 +793,13 @@ footer{
 
 }
 
-
+#jsdivision{
+     display: flex;
+    justify-content: center;   
+    gap: 7.5em; 
+    padding: 1em;
+    width: 95%;
+}
 
 /*======================================= FONT QUERIES=========================================*/
 
