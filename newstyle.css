@@ -1,8 +1,7 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-    /* outline-style: dashed; */
-    scroll-behavior: smooth;
+    outline-style: dashed;
 }
 html {    
     scroll-behavior: smooth;
@@ -36,43 +35,33 @@ html {
 .silver{
     background-color: var(--silver);
 }
-/*transition*/
-.square , .language {
-    transition: 0.2s;
+.square,.language{
+    transition: 0.3s;
+}
+
+.square:hover,.language:hover{
+    cursor: pointer;
 }
 
 .wrapcode > code{
     width: 100%;
 }
-.square:hover , .language:hover{
-    cursor: pointer !important;
-}
 .square:hover{
-    font-size: 1.05em;
-    /* box-shadow: rgb(255, 255, 255) 0.625em -1em; */
-    box-shadow: rgb(255, 255, 255) 40px 10px; 
-    width: calc(100% + 50px) !important;
-    position: relative;
-}
-
-.language:hover:not(.bigger,.bigger2){
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
     position: relative;
-    /* padding: 0em 5.7em; */
-    width: calc(100% + 50px) !important;
-    font-size: 1.05em !important;
-
+    padding: 0.9em;    
 }
 
-.language{
-    position: relative !important;
-}
+.language:hover{
 
-.bigger:hover,.bigger2:hover{
-    box-shadow: rgb(255, 255, 255) 0.625em -1em;
-    width: calc(100% + 50px) !important;
+        box-shadow: rgb(255, 255, 255) 0.625em -1em;
+        position: relative;
+        padding: 0em 6.7em !important;
+    
 }
-
+.square:hover > p{
+    width: 100%;
+}
 
 
 .square > a {
@@ -83,8 +72,8 @@ html {
 .square > p{
     font-weight: bold;
     white-space: pretty;
-    max-width: 35ch !important;
-    min-width: min-content;
+    max-width: 30ch !important;
+    min-width: fit-content;
     font-size: 1.8em !important;
 
 }
@@ -163,7 +152,9 @@ a{
 .description{
     font-size: 1.4rem !important;
     margin-top: 0.6em !important;
-    overflow-wrap: break-word;}
+    white-space: nowrap;
+    width: 100%;
+}
 .section > p{
     margin: 0;
 }
@@ -175,7 +166,7 @@ a{
     justify-content: start;
     align-items: center;
     font-size: 1.2rem;
-    width: 30em !important;
+    width: 20em;
 
 }
 
@@ -183,6 +174,13 @@ a{
     margin-top: 1.5em;
 }
 
+.jshero{
+    font-size: 2.7rem !important;
+}
+
+#jstext{
+    font-size: 1.4rem !important;
+}
 .listofas > a{
     text-align: center;
     width: 12.5em;
@@ -283,7 +281,8 @@ h1,h2,h3{
     justify-content: start;
 }
 .rightside > .card{
-    width: 30em;
+    min-width: 30em;
+    width: 100%;
     background-color: #E7E9EB;
     border: 0.02em;
     border-radius: 0.2em;
@@ -412,7 +411,10 @@ pre{
     font-size: 1.3rem !important;
 }
 
-
+.jstext{
+    font-size: 4.5rem !important;
+    width: 100%;
+}
 .division{
     display: flex;
     justify-content: center;   
@@ -515,7 +517,8 @@ pre{
     justify-content: center;
     justify-items: center;
     padding: 20px 80px;
-    background-color: var(--black) !important;
+    margin: 0 20px;
+    background-color: skyblue !important;
 
 }
 
@@ -523,16 +526,14 @@ pre{
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: center;
-    align-self: center;
     font-size: 1.8rem;
     border-radius: 0.3em;
     width: 100%;
     padding: 1em 4em;
     justify-self: center;
     font-size: 2rem;
-    height: 100% !important;
 }
+
 .language > span{
     font-size: 4rem;
     min-width: fit-content;
@@ -548,33 +549,23 @@ pre{
     grid-column: 3 / 5;
 }
 
-.bigger,.bigger2{
-    transition: 0.2s;
-}
-
-
 .firstgridwrapper{
     width: 100%;
     container: firstgridwrapper / inline-size;
 }
 
 .dsa{
-    text-align: start;
-    width: 100% !important;
+    font-size: 3rem !important;
+    min-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .dsacontainer{
-    height: auto;
+    height: 100%;
 }
 
 
-.language:hover:not(.bigger,.bigger2){
-    box-shadow: rgb(255, 255, 255) 0.625em -1em;
-    position: relative;
-    /* padding: 0em 6.7em ; */
-    width: calc(100% + 50px) !important;
 
-}
 
 
 
@@ -582,11 +573,16 @@ pre{
 
 
 @container  (max-width: 1000px) {
-
-   
+    .secondgrid{background-color: red !important;}
+    .language:hover{
+        box-shadow: rgb(255, 255, 255) 0.625em -1em;
+        position: relative;
+        padding: 0em 6.7em !important;
+    }
     .endcard > a{
+        background-color: red !important;
         padding: 20px;
-        width: 100% !important;
+        width: 50% !important;
         text-align: center;
     }
     .division{
@@ -622,31 +618,16 @@ pre{
     width: 100%;
     text-align: center;
     padding: 20px;
-    }
+}
 }
 
-footer{
-    background-image: url(astronaut.webp),
-    url(stars.webp);
-    width: 100% !important  ;
-    background-repeat: no-repeat, repeat;
-    background-position: bottom right;
-    padding: auto;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-}
 
-#firm{
-
-    font-size: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 @container  (max-width: 551px) {
 
+.secondgrid{
+    background-color:brown !important;
+}
     .division{
         width: 100% !important ;
         flex-direction: column;
@@ -658,6 +639,7 @@ footer{
     font-size: 2rem;
    }
    h2{
+    background-color: red;
     font-size: 4rem !important;
    }
 
@@ -687,12 +669,11 @@ footer{
    }
    .square:hover{
     box-shadow: rgb(255, 255, 255) 0.6125em -1em;
-    opacity: 1.5;
-   
+    position: relative;
+    padding: 0px;
 }
-
-
-
+.square:hover > p{
+    }
 }
 
 
@@ -701,7 +682,11 @@ footer{
 @container secondgrid (max-width:1281px){
     
     .secondgrid{
+        background-color: #029962 !important;
+    }
+    .secondgrid{
         grid-template-columns: repeat(2,minmax(250px,1fr));
+        background-color: red !important;
         
     }
     .language{
@@ -709,31 +694,25 @@ footer{
     }
     .bigger{
         grid-column: 1 / -1;
+        width: 100%;
     }
     .bigger2{
         grid-column: 1 / -1;
+        width: 100%;
     }
-    .dsa{
-        white-space: normal !important;
-    }
-    .language:hover, .bigger:hover, .bigger2:hover{
-        box-shadow: rgb(255, 255, 255) 0.625em -1em;
-        position: relative;
-        /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 90vw) + 10px) !important;
-    }
+    
 }
 
 
-@container secondgrid (max-width:600px)
-{
+@container secondgrid (max-width:600px){
 
-
+    .secondgrid{
+        background-color: purple !important;
+    }
     .secondgrid{
         grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
         background-color: rgb(246, 202, 202) !important;
-        background-color: green !important;
-
+       
     }
     .language{
         align-self: center;
@@ -742,32 +721,26 @@ footer{
     }
     .bigger{
         grid-column: 1 / -1;
+        width: 100%;
     }
     .bigger2{
         grid-column: 1 / -1;
+        width: 100%;
 
+    }
+    span{
+        width: 100% !important;
     }
     .dsa{
         width: 100%;
         text-wrap:balance;
         text-align: start;
-        font-size: 5rem !important;
     }
     .language{
         justify-self: center;
         align-self: center;
-     
+        margin: 0 !important;
+        padding: 0 ;
     }
-
-    /*new added*/
-    .language:hover, .bigger:hover, .bigger2:hover{
-        box-shadow: rgb(255, 255, 255) 0.625em -1em;
-        position: relative;
-        /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 80vw) + 20px) !important;
-    }
-    
-
-
 
 }
