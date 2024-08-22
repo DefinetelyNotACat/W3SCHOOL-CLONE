@@ -50,8 +50,8 @@ html {
 .square:hover{
     font-size: 1.05em;
     /* box-shadow: rgb(255, 255, 255) 0.625em -1em; */
-    box-shadow: rgb(255, 255, 255) 40px 10px; 
-    width: calc(100% + 50px) !important;
+    box-shadow: rgb(255, 255, 255) 2.5em 0.625em; 
+    width: calc(100% + 3.125em) !important;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ html {
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
     position: relative;
     /* padding: 0em 5.7em; */
-    width: calc(100% + 50px) !important;
+    width: calc(100% + 3.125em) !important;
     font-size: 1.05em !important;
 
 }
@@ -70,7 +70,7 @@ html {
 
 .bigger:hover,.bigger2:hover{
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
-    width: calc(100% + 50px) !important;
+    width: calc(100% + 3.125em) !important;
 }
 
 
@@ -327,11 +327,11 @@ h1,h2,h3{
 
 #wrapcodepy{
     height: 65%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 #wrapsql{
     height: 65%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 .pythonwrapcode{
     width: 100%;
@@ -431,6 +431,7 @@ pre{
 .pycode{
     min-height: 100%;
     padding: 0.6em;
+    font-size: 1.3rem;
 }
 
 .cardcontainer{
@@ -508,13 +509,13 @@ pre{
 .secondgrid{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,minmax(250px,1fr));
+    grid-template-columns: repeat(4,minmax(15.625em,1fr));
     grid-auto-rows: 1fr;
-    gap: 80px;
+    gap: 5em;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    padding: 20px 80px;
+    padding: 1.25em 5em;
     background-color: var(--black) !important;
 
 }
@@ -572,7 +573,7 @@ pre{
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
     position: relative;
     /* padding: 0em 6.7em ; */
-    width: calc(100% + 50px) !important;
+    width: calc(100% + 3.125em) !important;
 
 }
 
@@ -585,7 +586,7 @@ pre{
 
    
     .endcard > a{
-        padding: 20px;
+        padding: 1.25em;
         width: 100% !important;
         text-align: center;
     }
@@ -621,7 +622,7 @@ pre{
 .firstgrid > .square > a{
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 1.25em;
     }
 }
 
@@ -636,7 +637,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 3.125em;
 }
 
 #firm{
@@ -701,7 +702,7 @@ footer{
 @container secondgrid (max-width:1281px){
     
     .secondgrid{
-        grid-template-columns: repeat(2,minmax(250px,1fr));
+        grid-template-columns: repeat(2,minmax(15.625em,1fr));
         
     }
     .language{
@@ -720,7 +721,7 @@ footer{
         box-shadow: rgb(255, 255, 255) 0.625em -1em;
         position: relative;
         /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 90vw) + 20px) !important;
+        width: calc(min(100%, 90vw) + 1.25em) !important;
     }
 }
 
@@ -730,7 +731,7 @@ footer{
 
 
     .secondgrid{
-        grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(28.125em,1fr));
         background-color: rgb(246, 202, 202) !important;
         background-color: green !important;
 
@@ -764,10 +765,38 @@ footer{
         box-shadow: rgb(255, 255, 255) 0.625em -1em;
         position: relative;
         /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 80vw) + 20px) !important;
+        width: calc(min(100%, 80vw) + 1.25em) !important;
     }
     
 
 
 
 }
+
+
+
+/*======================================= FONT QUERIES=========================================*/
+
+@media (min-width: 30em) {
+    html {
+      font-size: 85%;
+    }
+  }
+  
+  @media (min-width: 40em) {
+    html {
+      font-size: 90%;
+    }
+  }
+  
+  @media (min-width: 50em) {
+    html {
+      font-size: 95%;
+    }
+  }
+  
+  @media (min-width: 60em) {
+    html {
+      font-size: 100%;
+    }
+  }
