@@ -1,7 +1,7 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-     outline-style: dashed; 
+      outline-style: dashed;  
     scroll-behavior: smooth;
 }
 html {    
@@ -60,7 +60,7 @@ html {
     position: relative;
     /* padding: 0em 5.7em; */
     width: calc(100% + 3.125em) !important;
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
 
 }
 
@@ -74,7 +74,6 @@ html {
 .language{
     position: relative !important;
 }
-
 .bigger:hover,.bigger2:hover{
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
     width: calc(100% + 3.125em) !important;
@@ -87,12 +86,13 @@ html {
     color: white;
     white-space: wrap;
 }
-.square > p{
+.square > p, .pcontainer > p {
     font-weight: bold;
-    white-space: pretty;
-    max-width: 35ch !important;
-    min-width: min-content;
     font-size: 1.8em !important;
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.5;
 
 }
 html,body{
@@ -169,7 +169,7 @@ a{
 
 .description{
     font-size: 1.4rem !important;
-    margin-top: 0.6em !important;
+    top: 0.6em !important;
     overflow-wrap: break-word;}
 .section > p{
     margin: 0;
@@ -301,7 +301,6 @@ h1,h2,h3{
 
 .rightside > .card{
     width: 30em;
-    max-width: 100%;
     background-color: #E7E9EB;
     border: 0.02em;
     border-radius: 0.2em;
@@ -451,6 +450,8 @@ pre{
     min-height: 100%;
     padding: 0.6em;
     font-size: 1.3rem;
+    width: 100%;
+    line-height: 1.5;
 }
 
 .cardcontainer{
@@ -472,9 +473,9 @@ pre{
     display: grid;
     background-color: var(--black);
     grid-template-columns: repeat(auto-fit,minmax(30em,1fr));
-    grid-auto-rows: 1fr;
+    grid-auto-rows: auto;
     padding: 4.0625em 6.25em;
-    gap: 8.5em;
+    gap: 6.5em;
     container-name: firstgrid;
     container-type: inline-size;
 
@@ -596,6 +597,103 @@ pre{
 
 }
 
+.pcontainer{
+    width: 100%;
+    background-color: pink;
+}
+
+
+
+footer{
+    background-image:url(stars.webp);
+    width: 100vw;
+        background-image: url(astronaut.webp),
+        url(stars.webp);
+        width: 100% !important;
+        background-repeat: no-repeat, repeat;
+        background-position: bottom right, center !important;
+        padding: auto;
+        height: 100vh;
+        padding-top: 3.125em;
+        container: footer / inline-size;
+    
+}
+
+#footercontentcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 30px;
+    flex-direction: column;
+    padding-left: 110px;
+    gap: 50px;
+}
+
+
+#footerbar{
+    color: white;
+    display: flex;
+    justify-content: start;
+    gap: 80px;
+    font-size: 1rem;
+    width: 100% !important;
+    
+}
+
+.titlecol > h2{
+    font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.list{
+    display: flex;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+}
+.element{
+    display: flex;
+    padding: 0;
+    /* width: 150px; */
+    white-space: nowrap;
+    text-align: center;
+    color: #FFF4A3 !important;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center !important;
+}
+
+
+.titlecol{
+    padding: 0;
+    /* width: 150px; */
+    white-space: nowrap;
+    text-align: center;
+    color: white !important;
+    text-align: center;
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.element:hover{
+    text-decoration: underline;
+}
+
+
+.col{
+    text-align: start !important;
+    display: flex;
+    justify-content: start;
+}
 
 
 /*=======================================QUERIES=========================================*/
@@ -645,25 +743,8 @@ pre{
     }
 }
 
-footer{
-    background-image: url(astronaut.webp),
-    url(stars.webp);
-    width: 100% !important  ;
-    background-repeat: no-repeat, repeat;
-    background-position: bottom right;
-    padding: auto;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3.125em;
-}
 
-#firm{
 
-    font-size: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 @container  (max-width: 551px) {
 
@@ -791,23 +872,27 @@ footer{
 
 
 
+
+
 }
 
-#jsdivision{
-     display: flex;
-    justify-content: center;   
-    gap: 7.5em; 
-    padding: 1em;
-    width: 95%;
+@container footer (max-width:1000px){
+
+    #footerbar{
+        background-color: red !important;
+    }
+
 }
 
+
+  
 /*======================================= FONT QUERIES=========================================*/
 
 @media (min-width: 30em) {
     html {
       font-size: 85%;
     }
-  }
+}
   
   @media (min-width: 40em) {
     html {
@@ -825,4 +910,4 @@ footer{
     html {
       font-size: 100%;
     }
-  }
+}
