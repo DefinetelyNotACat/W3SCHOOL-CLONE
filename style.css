@@ -65,11 +65,10 @@ html {
 }
 
 .take{
-    display: flex;
+    text-wrap: balance !important;
     min-height: 100% !important;
     margin: 0;
-    flex: 1;
-    line-height: 2;
+    line-height: 1.5;
 }
 .language{
     position: relative !important;
@@ -98,6 +97,7 @@ html {
 html,body{
     padding: 0px;
     margin: 0px;
+    background-color: var(--black);
 }
 
 
@@ -170,7 +170,8 @@ a{
 .description{
     font-size: 1.4rem !important;
     top: 0.6em !important;
-    overflow-wrap: break-word;}
+    overflow-wrap: break-word;
+}
 .section > p{
     margin: 0;
 }
@@ -183,11 +184,17 @@ a{
     align-items: center;
     font-size: 1.2rem;
     width: 30em !important;
+    flex: 1;
+    
+    
+
 
 }
 
 .leftside > p{
     margin-top: 1.5em;
+    white-space: wrap;
+
 }
 
 .listofas > a{
@@ -206,6 +213,8 @@ a{
 
 h1,h2,h3{
     font-family: 'Source Sans Pro', sans-serif;
+    white-space: wrap;
+
 }
 
 
@@ -298,9 +307,13 @@ h1,h2,h3{
     justify-content: end;
 }
 
-
+.rightside {
+    display: flex;
+    flex: 1;
+}
 .rightside > .card{
-    width: 30em;
+    max-width: 30em;
+    width: 100%;
     background-color: #E7E9EB;
     border: 0.02em;
     border-radius: 0.2em;
@@ -434,7 +447,8 @@ pre{
 .division{
     display: flex;
     justify-content: center;   
-    gap: 7.5em; 
+    /* gap: 7.5em;  */
+    gap: 1em;
     padding: 1em;
     width: 100%;
 }
@@ -581,7 +595,6 @@ pre{
 
 .dsa{
     text-align: start;
-    width: 100% !important;
 }
 
 .dsacontainer{
@@ -604,18 +617,15 @@ pre{
 
 
 
-footer{
-    background-image:url(stars.webp);
+.footerwrapper
+{
     width: 100vw;
-        background-image: url(astronaut.webp),
-        url(stars.webp);
-        width: 100% !important;
-        background-repeat: no-repeat, repeat;
-        background-position: bottom right, center !important;
-        padding: auto;
-        height: 100vh;
-        padding-top: 3.125em;
-        container: footer / inline-size;
+    width: 100% !important;
+    min-height: 100vh;
+    padding: auto;
+    padding-top: 3.125em;
+    container: footer / inline-size;
+    
     
 }
 
@@ -641,6 +651,15 @@ footer{
     
 }
 
+.astronaut{
+    background-image: url(astronaut.webp), url(stars.webp);
+    background-repeat: no-repeat, repeat;
+    background-position: top right, center !important;
+    height: 70vh;
+    margin: 0;
+
+}
+
 .titlecol > h2{
     font-size: 1.3rem;
     margin: 0;
@@ -651,7 +670,7 @@ footer{
     font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
     justify-content: start;
-    gap: 20px;
+    gap: 110px;
     width: 100%;
 }
 .element{
@@ -673,7 +692,7 @@ footer{
     /* width: 150px; */
     white-space: nowrap;
     text-align: center;
-    color: white !important;
+    color: #ddd !important;
     text-align: center;
     font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
@@ -683,7 +702,9 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
-
+.titlecol > h2{
+    font-size: 2rem;
+}
 .element:hover{
     text-decoration: underline;
 }
@@ -693,6 +714,13 @@ footer{
     text-align: start !important;
     display: flex;
     justify-content: start;
+    font-size: 1.5rem;
+
+}
+
+.language > span{
+    white-space: nowrap;
+    width: 100%;
 }
 
 
@@ -720,6 +748,7 @@ footer{
     }
     .rightside{
         min-width: 100%;
+        justify-content: center;
     }
    .description{
     margin-bottom: 1.3em;
@@ -839,7 +868,12 @@ footer{
     .language{
         align-self: center;
         justify-self: center;
-        width: min(100%,80vw) !important;
+        /* width: min(100%,80vw) !important; */
+        width: calc(min-content + 5vw);
+    } 
+    .language > span{
+        width: 100%;
+        text-wrap: balance;
     }
     .bigger{
         grid-column: 1 / -1;
@@ -879,9 +913,41 @@ footer{
 @container footer (max-width:1000px){
 
     #footerbar{
-        background-color: red !important;
+        flex-direction: column;
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+    
     }
 
+    .element{
+        text-align: center;
+        font-size: 2rem;
+    }
+    #footercontentcontainer{
+        padding-left: 40px;
+
+    }
+    .list{
+        flex-direction: column !important;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.2rem !important;
+
+    }
+
+    .astronaut{
+        background-image: url(astronaut.webp), url(stars.webp);
+        background-repeat: no-repeat, repeat;
+        background-position: bottom center, center !important;
+        min-height: 100vh ;
+    }
 }
 
 
@@ -911,3 +977,14 @@ footer{
       font-size: 100%;
     }
 }
+
+
+
+/*HOVER TEST*/
+
+
+
+.square:hover{
+    transform: scale(1.05);
+}
+
