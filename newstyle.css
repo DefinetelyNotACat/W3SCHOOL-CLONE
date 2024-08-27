@@ -1,14 +1,13 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-      /* outline-style: dashed;   */
-    scroll-behavior: smooth;
+    outline-style: dashed;
 }
 html {    
     scroll-behavior: smooth;
 }
 :root{
-    --pink: hsl(354, 64%, 77%);
+    --pink: #eaa0a8;
     --yellow:  #FFF4A3;
     --white: #F3ECEA;
     --lime: #D9EEE1;
@@ -36,56 +35,33 @@ html {
 .silver{
     background-color: var(--silver);
 }
-/*transition*/
-.square , .language {
-    transition: 0.2s;
+.square,.language{
+    transition: 0.3s;
 }
 
-
-
-.square:hover{
-    transform: scale(1.05);
+.square:hover,.language:hover{
+    cursor: pointer;
 }
-
-
 
 .wrapcode > code{
     width: 100%;
 }
-.square:hover , .language:hover{
-    cursor: pointer !important;
-}
 .square:hover{
-    font-size: 1.05em;
-    /* box-shadow: rgb(255, 255, 255) 0.625em -1em; */
-    box-shadow: rgb(255, 255, 255) 2.5em 0.625em; 
-    width: calc(100% + 3.125em) !important;
-    position: relative;
-}
-
-.language:hover:not(.bigger,.bigger2){
     box-shadow: rgb(255, 255, 255) 0.625em -1em;
     position: relative;
-    /* padding: 0em 5.7em; */
-    width: calc(100% + 3.125em) !important;
-    font-size: 1.3em !important;
-
+    padding: 0.9em;    
 }
 
-.take{
-    text-wrap: balance !important;
-    min-height: 100% !important;
-    margin: 0;
-    line-height: 1.5;
-}
-.language{
-    position: relative !important;
-}
-.bigger:hover,.bigger2:hover{
-    box-shadow: rgb(255, 255, 255) 0.625em -1em;
-    width: calc(100% + 3.125em) !important;
-}
+.language:hover{
 
+        box-shadow: rgb(255, 255, 255) 0.625em -1em;
+        position: relative;
+        padding: 0em 6.7em !important;
+    
+}
+.square:hover > p{
+    width: 100%;
+}
 
 
 .square > a {
@@ -93,21 +69,19 @@ html {
     color: white;
     white-space: wrap;
 }
-.square > p, .pcontainer > p {
+.square > p{
     font-weight: bold;
+    white-space: pretty;
+    max-width: 30ch !important;
+    min-width: fit-content;
     font-size: 1.8em !important;
-    width: 100%;
-    margin: 0;
-    padding: 40px;
-    line-height: 1.5;
 
 }
 html,body{
     padding: 0px;
     margin: 0px;
-    background-color: var(--black);
-   
 }
+
 
 
 a{
@@ -177,8 +151,9 @@ a{
 
 .description{
     font-size: 1.4rem !important;
-    top: 0.6em !important;
-    overflow-wrap: break-word;
+    margin-top: 0.6em !important;
+    white-space: nowrap;
+    width: 100%;
 }
 .section > p{
     margin: 0;
@@ -191,20 +166,21 @@ a{
     justify-content: start;
     align-items: center;
     font-size: 1.2rem;
-    width: 30em !important;
-    flex: 1;
-    
-    
-
+    width: 20em;
 
 }
 
 .leftside > p{
     margin-top: 1.5em;
-    white-space: wrap;
-
 }
 
+.jshero{
+    font-size: 2.7rem !important;
+}
+
+#jstext{
+    font-size: 1.4rem !important;
+}
 .listofas > a{
     text-align: center;
     width: 12.5em;
@@ -221,8 +197,6 @@ a{
 
 h1,h2,h3{
     font-family: 'Source Sans Pro', sans-serif;
-    white-space: wrap;
-
 }
 
 
@@ -230,16 +204,8 @@ h1,h2,h3{
     white-space: nowrap;
     font-size: 1rem;
     width: 100% !important;
-  
-
 }
 
-
-
-
-.endcardjs{
-    height: 100%;
-}
 .listofas > h2{
     font-size: 2.5rem;
     font-weight: 900;
@@ -312,15 +278,10 @@ h1,h2,h3{
 .pycard > .endcard{
     width: 100%;
     display: flex;
-    justify-content: end;
-}
-
-.rightside {
-    display: flex;
-    flex: 1;
+    justify-content: start;
 }
 .rightside > .card{
-    max-width: 30em;
+    min-width: 30em;
     width: 100%;
     background-color: #E7E9EB;
     border: 0.02em;
@@ -333,6 +294,8 @@ h1,h2,h3{
   
 
 }
+
+
 .pythonwrapcode{
     height: 100%;
     text-align: start !important;
@@ -345,9 +308,7 @@ h1,h2,h3{
     font-size: 1.4rem !important;
 }
 
-#removemargin{
-    margin-top: 0.85em;
-}
+
 .wrapcode{
     width: 100%;
     display: flex;
@@ -360,17 +321,16 @@ h1,h2,h3{
     /*color: red;*/
     border-left: 0.19em solid #029962;
     /* white-space: wrap; */
-    height: 70%;
 
 }
 
 #wrapcodepy{
     height: 65%;
-    margin-bottom: 1.25em;
+    margin-bottom: 20px;
 }
 #wrapsql{
     height: 65%;
-    margin-bottom: 1.25em;
+    margin-bottom: 20px;
 }
 .pythonwrapcode{
     width: 100%;
@@ -451,12 +411,14 @@ pre{
     font-size: 1.3rem !important;
 }
 
-
+.jstext{
+    font-size: 4.5rem !important;
+    width: 100%;
+}
 .division{
     display: flex;
     justify-content: center;   
-    /* gap: 7.5em;  */
-    gap: 1em;
+    gap: 7.5em; 
     padding: 1em;
     width: 100%;
 }
@@ -471,9 +433,6 @@ pre{
 .pycode{
     min-height: 100%;
     padding: 0.6em;
-    font-size: 1.3rem;
-    width: 100%;
-    line-height: 1.5;
 }
 
 .cardcontainer{
@@ -495,9 +454,9 @@ pre{
     display: grid;
     background-color: var(--black);
     grid-template-columns: repeat(auto-fit,minmax(30em,1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: 1fr;
     padding: 4.0625em 6.25em;
-    gap: 6.5em;
+    gap: 8.5em;
     container-name: firstgrid;
     container-type: inline-size;
 
@@ -551,14 +510,15 @@ pre{
 .secondgrid{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,minmax(15.625em,1fr));
+    grid-template-columns: repeat(4,minmax(250px,1fr));
     grid-auto-rows: 1fr;
-    gap: 5em;
+    gap: 80px;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    padding: 1.25em 5em;
-    background-color: var(--black) !important;
+    padding: 20px 80px;
+    margin: 0 20px;
+    background-color: skyblue !important;
 
 }
 
@@ -566,16 +526,14 @@ pre{
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: center;
-    align-self: center;
     font-size: 1.8rem;
     border-radius: 0.3em;
     width: 100%;
     padding: 1em 4em;
     justify-self: center;
     font-size: 2rem;
-    height: 100% !important;
 }
+
 .language > span{
     font-size: 4rem;
     min-width: fit-content;
@@ -591,269 +549,40 @@ pre{
     grid-column: 3 / 5;
 }
 
-.bigger,.bigger2{
-    transition: 0.2s;
-}
-
-
 .firstgridwrapper{
     width: 100%;
     container: firstgridwrapper / inline-size;
 }
 
 .dsa{
-    text-align: start;
+    font-size: 3rem !important;
+    min-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .dsacontainer{
-    height: auto;
-}
-
-
-.language:hover:not(.bigger,.bigger2){
-    box-shadow: rgb(255, 255, 255) 0.625em -1em;
-    position: relative;
-    /* padding: 0em 6.7em ; */
-    width: calc(100% + 3.125em) !important;
-
-}
-
-.pcontainer{
-    width: 100%;
-    background-color: pink;
+    height: 100%;
 }
 
 
 
-.footerwrapper
-{
-    width: 100vw;
-    width: 100% !important;
-    min-height: 100vh;
-    padding: auto;
-    padding-top: 3.125em;
-    container: footer / inline-size;
-    
-    
-}
-
-#footercontentcontainer{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    margin-top: 30px;
-    flex-direction: column;
-    padding-left: 110px;
-    gap: 50px;
-}
 
 
-#footerbar{
-    color: white;
-    display: flex;
-    justify-content: start;
-    gap: 65px;
-    font-size: 1.4rem;
-    
-}
-
-.astronaut{
-    background-image: url(astronaut.webp), url(stars.webp);
-    background-repeat: no-repeat, repeat;
-    background-position: top right, center !important;
-    height: 60vh;
-    margin: 0;
-
-}
-
-.titlecol > h2{
-    font-size: 1.3rem;
-   
-    white-space: nowrap;
-}
-.list{
-    display: flex;
-    font-family: Source Sans Pro, sans-serif;
-    font-weight: bold;
-    justify-content: start;
-    gap:160px;
-    width: 100%;
-}
-
-.list > .titlecol > .col{
-
-    text-align: center;
-
-}
-.element{
-    display: flex;
-    padding: 0;
-    /* width: 150px; */
-    white-space: nowrap;
-    text-align: center;
-    color: #FFF4A3 !important;
-    font-family: Source Sans Pro, sans-serif;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center !important;
-}
-
-
-.titlecol{
-    padding: 0;
-    /* width: 150px; */
-    white-space: nowrap !important;
-    word-break: normal;
-    text-align: center;
-    color: #ddd !important;
-    text-align: center;
-    font-family: Source Sans Pro, sans-serif;
-    font-weight: bold;
-    line-height: 1.5;
-    text-align: center !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.titlecol > h2{
-    font-size: 2rem;
-}
-.element:hover{
-    text-decoration: underline;
-}
-
-
-.col{
-    text-align: center !important;
-    display: flex;
-    justify-content: start;
-    font-size: 1.2rem;
-
-}
-
-.language > span{
-    white-space: nowrap;
-    width: 100%;
-}
-
-.tutorials > .col::after{
-    content: "\00A0 Tutorial";
-}
-.references > .col::after{
-    content: "\00A0 Reference";
-}
-.examples > .col::after{
-    content: "\00A0 Examples";
-}  
-.certifications > .col::after{
-    content: "\00A0 Certifications";
-}
-
-
-.iconsflex{
-    color: white;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 45px;
-    width: 100%;
-}
-
-.iconsflex > *{
-    width: fit-content;
-}
-
-.fa:hover{
-    color: #FFF4A3;
-
-}
-.otherfa:hover{
-    color: #FFF4A3;
-
-}
-
-.fa,.otherfa{
-    cursor: pointer;
-}
-
-.fa-linkedin{
-    background-color: white;
-    color: black;
-    font-size: 2rem;
-    padding:5px;
-}
-
-.fa-linkedin:hover{
-    background-color: #FFF4A3;
-        color: black;
-}
-.fa-discord{
-    font-size: 2.2rem;
-}
-.fa-facebook{
-    font-size: 2.2rem;
-}
-.fa-youtube-play{
-    font-size: 2.2rem;
-}
-
-.fa-instagram{
-    font-size: 2.2rem;
-}
-
-.seperator{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-.seperator > a{
-    height: 100% !important;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-}
-
-.seperator >a:hover{
-    color: #FFF4A3;
-    text-decoration: underline;
-}  
-
-.footertext{
-    color: white;
-    max-width: 120ch;
-    text-wrap: pretty;
-    font-size: 1.1rem;
-}
-
-.footertext > span{
-    display: block;
-    margin-top: 1rem;
-}
-
-
-.footertext  a{
-    color: white;
-    text-decoration: underline;
-
-}
-
-
-.footertext  a:hover{
-    color: #FFF4A3;
-    text-decoration: underline;
-}
 
 /*=======================================QUERIES=========================================*/
 
 
 @container  (max-width: 1000px) {
-
-   
+    .secondgrid{background-color: red !important;}
+    .language:hover{
+        box-shadow: rgb(255, 255, 255) 0.625em -1em;
+        position: relative;
+        padding: 0em 6.7em !important;
+    }
     .endcard > a{
-        padding: 1.25em;
-        width: 100% !important;
+        background-color: red !important;
+        padding: 20px;
+        width: 50% !important;
         text-align: center;
     }
     .division{
@@ -869,7 +598,6 @@ pre{
     }
     .rightside{
         min-width: 100%;
-        justify-content: center;
     }
    .description{
     margin-bottom: 1.3em;
@@ -889,15 +617,17 @@ pre{
 .firstgrid > .square > a{
     width: 100%;
     text-align: center;
-    padding: 1.25em;
-    }
+    padding: 20px;
 }
-
+}
 
 
 
 @container  (max-width: 551px) {
 
+.secondgrid{
+    background-color:brown !important;
+}
     .division{
         width: 100% !important ;
         flex-direction: column;
@@ -909,6 +639,7 @@ pre{
     font-size: 2rem;
    }
    h2{
+    background-color: red;
     font-size: 4rem !important;
    }
 
@@ -938,12 +669,11 @@ pre{
    }
    .square:hover{
     box-shadow: rgb(255, 255, 255) 0.6125em -1em;
-    opacity: 1.5;
-   
+    position: relative;
+    padding: 0px;
 }
-
-
-
+.square:hover > p{
+    }
 }
 
 
@@ -952,7 +682,11 @@ pre{
 @container secondgrid (max-width:1281px){
     
     .secondgrid{
-        grid-template-columns: repeat(2,minmax(15.625em,1fr));
+        background-color: #029962 !important;
+    }
+    .secondgrid{
+        grid-template-columns: repeat(2,minmax(250px,1fr));
+        background-color: red !important;
         
     }
     .language{
@@ -960,182 +694,53 @@ pre{
     }
     .bigger{
         grid-column: 1 / -1;
+        width: 100%;
     }
     .bigger2{
         grid-column: 1 / -1;
+        width: 100%;
     }
-    .dsa{
-        white-space: normal !important;
-    }
-    .language:hover, .bigger:hover, .bigger2:hover{
-        box-shadow: rgb(255, 255, 255) 0.625em -1em;
-        position: relative;
-        /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 90vw) + 1.25em) !important;
-    }
+    
 }
 
 
-@container secondgrid (max-width:600px)
-{
-
+@container secondgrid (max-width:600px){
 
     .secondgrid{
-        grid-template-columns: repeat(auto-fit,minmax(28.125em,1fr));
+        background-color: purple !important;
+    }
+    .secondgrid{
+        grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
         background-color: rgb(246, 202, 202) !important;
-        background-color: green !important;
-
+       
     }
     .language{
         align-self: center;
         justify-self: center;
-        /* width: min(100%,80vw) !important; */
-        width: calc(min-content + 5vw);
-    } 
-    .language > span{
-        width: 100%;
-        text-wrap: balance;
+        width: min(100%,80vw) !important;
     }
     .bigger{
         grid-column: 1 / -1;
+        width: 100%;
     }
     .bigger2{
         grid-column: 1 / -1;
+        width: 100%;
 
+    }
+    span{
+        width: 100% !important;
     }
     .dsa{
         width: 100%;
         text-wrap:balance;
         text-align: start;
-        font-size: 5rem !important;
     }
     .language{
         justify-self: center;
         align-self: center;
-     
+        margin: 0 !important;
+        padding: 0 ;
     }
-
-    /*new added*/
-    .language:hover, .bigger:hover, .bigger2:hover{
-        box-shadow: rgb(255, 255, 255) 0.625em -1em;
-        position: relative;
-        /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 80vw) + 1.25em) !important;
-
-    }
-    
-
-
-
-
 
 }
-
-@container footer (max-width:1000px){
-
-    #footerbar{
-        flex-direction: column;
-        width: min-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-
-    .element{
-        text-align: center;
-        font-size: 2rem;
-    }
-    #footercontentcontainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        padding: 20px 50px;
-        /*width 90vw fa funzionare il tutto*/
-
-    }
-    .list{
-        flex-direction: column !important;
-    }
-    .col{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 1.2rem !important;
-
-    }
-
-    .astronaut{
-        background-image: url(astronaut.webp), url(stars.webp);
-        background-repeat: no-repeat, repeat;
-        background-position: bottom center, center !important;
-        min-height: 100%;
-    
-        position: relative;
-    }
-
-    .iconsflex{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .iconsflex > a {
-        font-size: 2rem;
-
-    }
-
-    .seperator{
-        width: 100%;
-        display: block;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        gap: 80px;
-        font-size: 1.9rem;
-
-    }
-
-    .seperator > *{
-        color: white;
-    }
-
-    .seperator > *:hover{
-        color: #FFF4A3;
-    }
-   
-
-    
-   
-}
-
-
-  
-/*======================================= FONT QUERIES=========================================*/
-
-@media (min-width: 30em) {
-    html {
-      font-size: 85%;
-    }
-}
-  
-  @media (min-width: 40em) {
-    html {
-      font-size: 90%;
-    }
-  }
-  
-  @media (min-width: 50em) {
-    html {
-      font-size: 95%;
-    }
-  }
-  
-  @media (min-width: 60em) {
-    html {
-      font-size: 100%;
-    }
-}
-
-
