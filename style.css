@@ -1,14 +1,14 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-      outline-style: dashed;  
+      /* outline-style: dashed;   */
     scroll-behavior: smooth;
 }
 html {    
     scroll-behavior: smooth;
 }
 :root{
-    --pink: #eaa0a8;
+    --pink: hsl(354, 64%, 77%);
     --yellow:  #FFF4A3;
     --white: #F3ECEA;
     --lime: #D9EEE1;
@@ -40,6 +40,14 @@ html {
 .square , .language {
     transition: 0.2s;
 }
+
+
+
+.square:hover{
+    transform: scale(1.05);
+}
+
+
 
 .wrapcode > code{
     width: 100%;
@@ -98,8 +106,8 @@ html,body{
     padding: 0px;
     margin: 0px;
     background-color: var(--black);
+   
 }
-
 
 
 a{
@@ -645,9 +653,8 @@ pre{
     color: white;
     display: flex;
     justify-content: start;
-    gap: 80px;
-    font-size: 1rem;
-    width: 100% !important;
+    gap: 65px;
+    font-size: 1.4rem;
     
 }
 
@@ -655,23 +662,29 @@ pre{
     background-image: url(astronaut.webp), url(stars.webp);
     background-repeat: no-repeat, repeat;
     background-position: top right, center !important;
-    height: 70vh;
+    height: 60vh;
     margin: 0;
 
 }
 
 .titlecol > h2{
     font-size: 1.3rem;
-    margin: 0;
-    margin-bottom: 20px;
+   
+    white-space: nowrap;
 }
 .list{
     display: flex;
     font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
     justify-content: start;
-    gap: 110px;
+    gap:160px;
     width: 100%;
+}
+
+.list > .titlecol > .col{
+
+    text-align: center;
+
 }
 .element{
     display: flex;
@@ -690,7 +703,8 @@ pre{
 .titlecol{
     padding: 0;
     /* width: 150px; */
-    white-space: nowrap;
+    white-space: nowrap !important;
+    word-break: normal;
     text-align: center;
     color: #ddd !important;
     text-align: center;
@@ -711,10 +725,10 @@ pre{
 
 
 .col{
-    text-align: start !important;
+    text-align: center !important;
     display: flex;
     justify-content: start;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
 }
 
@@ -723,6 +737,113 @@ pre{
     width: 100%;
 }
 
+.tutorials > .col::after{
+    content: "\00A0 Tutorial";
+}
+.references > .col::after{
+    content: "\00A0 Reference";
+}
+.examples > .col::after{
+    content: "\00A0 Examples";
+}  
+.certifications > .col::after{
+    content: "\00A0 Certifications";
+}
+
+
+.iconsflex{
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+}
+
+.iconsflex > *{
+    width: fit-content;
+}
+
+.fa:hover{
+    color: #FFF4A3;
+
+}
+.otherfa:hover{
+    color: #FFF4A3;
+
+}
+
+.fa,.otherfa{
+    cursor: pointer;
+}
+
+.fa-linkedin{
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+    padding:5px;
+}
+
+.fa-linkedin:hover{
+    background-color: #FFF4A3;
+        color: black;
+}
+.fa-discord{
+    font-size: 2.2rem;
+}
+.fa-facebook{
+    font-size: 2.2rem;
+}
+.fa-youtube-play{
+    font-size: 2.2rem;
+}
+
+.fa-instagram{
+    font-size: 2.2rem;
+}
+
+.seperator{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.seperator > a{
+    height: 100% !important;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.seperator >a:hover{
+    color: #FFF4A3;
+    text-decoration: underline;
+}  
+
+.footertext{
+    color: white;
+    max-width: 120ch;
+    text-wrap: pretty;
+    font-size: 1.1rem;
+}
+
+.footertext > span{
+    display: block;
+    margin-top: 1rem;
+}
+
+
+.footertext  a{
+    color: white;
+    text-decoration: underline;
+
+}
+
+
+.footertext  a:hover{
+    color: #FFF4A3;
+    text-decoration: underline;
+}
 
 /*=======================================QUERIES=========================================*/
 
@@ -918,17 +1039,21 @@ pre{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
-    footer{
-    
-    }
+
 
     .element{
         text-align: center;
         font-size: 2rem;
     }
     #footercontentcontainer{
-        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 50px;
+        /*width 90vw fa funzionare il tutto*/
 
     }
     .list{
@@ -946,8 +1071,43 @@ pre{
         background-image: url(astronaut.webp), url(stars.webp);
         background-repeat: no-repeat, repeat;
         background-position: bottom center, center !important;
-        min-height: 100vh ;
+        min-height: 100%;
+    
+        position: relative;
     }
+
+    .iconsflex{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .iconsflex > a {
+        font-size: 2rem;
+
+    }
+
+    .seperator{
+        width: 100%;
+        display: block;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        font-size: 1.9rem;
+
+    }
+
+    .seperator > *{
+        color: white;
+    }
+
+    .seperator > *:hover{
+        color: #FFF4A3;
+    }
+   
+
+    
+   
 }
 
 
@@ -978,13 +1138,4 @@ pre{
     }
 }
 
-
-
-/*HOVER TEST*/
-
-
-
-.square:hover{
-    transform: scale(1.05);
-}
 
