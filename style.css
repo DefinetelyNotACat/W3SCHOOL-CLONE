@@ -574,7 +574,7 @@ pre{
     padding: 1em 4em;
     justify-self: center;
     font-size: 2rem;
-    height: 100% !important;
+    height: auto;
 }
 .language > span{
     font-size: 4rem;
@@ -627,7 +627,6 @@ pre{
 
 .footerwrapper
 {
-    width: 100vw;
     width: 100% !important;
     min-height: 100vh;
     padding: auto;
@@ -644,16 +643,16 @@ pre{
     align-items: start;
     margin-top: 30px;
     flex-direction: column;
-    padding-left: 110px;
+    padding-left: 0;
     gap: 50px;
 }
 
 
 #footerbar{
+    width: 100%;
     color: white;
     display: flex;
-    justify-content: start;
-    gap: 65px;
+    justify-content: space-around !important;
     font-size: 1.4rem;
     
 }
@@ -676,16 +675,25 @@ pre{
     display: flex;
     font-family: Source Sans Pro, sans-serif;
     font-weight: bold;
-    justify-content: start;
-    gap:160px;
+    justify-content: space-around;
+    gap:100px;
     width: 100%;
 }
 
 .list > .titlecol > .col{
 
     text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
 
 }
+.list > .titlecol > .col:hover{
+    text-decoration: underline ;
+    color: var(--yellow);
+}
+
+
 .element{
     display: flex;
     padding: 0;
@@ -754,7 +762,7 @@ pre{
 .iconsflex{
     color: white;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 45px;
     width: 100%;
@@ -850,7 +858,7 @@ pre{
 
 @container  (max-width: 1000px) {
 
-   
+
     .endcard > a{
         padding: 1.25em;
         width: 100% !important;
@@ -924,7 +932,7 @@ pre{
    }
    .wrapcode{
     font-size: 1.1rem;
-    width: auto;
+    width: 100%;
 
    }
    .pythonwrapcode{
@@ -956,7 +964,7 @@ pre{
         
     }
     .language{
-        width: min(100%,90vw);
+        width: min(100%, 90vw);
     }
     .bigger{
         grid-column: 1 / -1;
@@ -990,8 +998,10 @@ pre{
         align-self: center;
         justify-self: center;
         /* width: min(100%,80vw) !important; */
-        width: calc(min-content + 5vw);
+        width: min(100%,90vw);
+        height: 100%;
     } 
+    
     .language > span{
         width: 100%;
         text-wrap: balance;
@@ -1015,14 +1025,9 @@ pre{
      
     }
 
-    /*new added*/
-    .language:hover, .bigger:hover, .bigger2:hover{
-        box-shadow: rgb(255, 255, 255) 0.625em -1em;
-        position: relative;
-        /* padding: 0em 7.7em !important; */
-        width: calc(min(100%, 80vw) + 1.25em) !important;
 
-    }
+    /*new added*/
+   
     
 
 
@@ -1052,18 +1057,22 @@ pre{
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        padding: 20px 50px;
+        padding: 0 50px;
+        margin: 0;
         /*width 90vw fa funzionare il tutto*/
 
     }
     .list{
         flex-direction: column !important;
+        margin-bottom: 1rem ;
     }
     .col{
         display: flex;
         justify-content: center;
-        text-align: center;
+        text-align: center !important;
         font-size: 1.2rem !important;
+        max-width: fit-content !important;
+        margin: auto;
 
     }
 
@@ -1077,7 +1086,7 @@ pre{
     }
 
     .iconsflex{
-        justify-content: center;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
 
@@ -1091,8 +1100,7 @@ pre{
         display: block;
         text-align: center;
         display: flex;
-        justify-content: center;
-        gap: 80px;
+        justify-content: space-around;
         font-size: 1.9rem;
 
     }
@@ -1104,6 +1112,7 @@ pre{
     .seperator > *:hover{
         color: #FFF4A3;
     }
+   
    
 
     
