@@ -684,7 +684,14 @@ pre{
 .list > .titlecol > .col{
 
     text-align: center;
+    color: white;
+    cursor: pointer;
 
+}
+
+.col:hover{
+    text-decoration: underline;
+    color: var(--yellow) !important;
 }
 .element{
     display: flex;
